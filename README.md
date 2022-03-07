@@ -10,9 +10,11 @@ El proyecto se encuentra publicado en:
 
 https://pokedex-app-orpin.vercel.app/
 
-```bash
-La primer carga a la web puede demorarse unos minutos debido a que su optimización no fue el principal enfoque de este proyecto
-```
+``bash
+La primer carga a la web puede demorarse unos minutos debido a que su optimización 
+no fue el principal enfoque de este proyecto
+``
+
 
 
 
