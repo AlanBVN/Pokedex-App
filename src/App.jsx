@@ -70,58 +70,12 @@ function App() {
   }
  };
 
-  // const getPokemonsFromType = async (typeName) => {
-  //   let typePokeArray = [];
-  //   const {
-  //     data: { pokemon },
-  //   } = await axios.get(`https://pokeapi.co/api/v2/type/${typeName}`);
-  //   typePokeArray = [...pokemon];
-
-  //   const pokeNames = [];
-  //   typePokeArray.forEach((poke) => {
-  //     pokeNames.push(poke.pokemon.name);
-  //   });
-
-  //   let pokeNamesFix = pokeNames.filter((e) => e !== "giratina-altered");
-  //   getPokemonSecondFunction(pokeNamesFix);
-  // };
-
-  // const getPokemonSecondFunction = async (data) => {
-  //   let pokemonArrayTypes = [];
-
-  //   for (let i = 0; i < 10; i++) {
-  //     let data1 = await getPokemonDataFromType(data[i]);
-  //     let data2 = await getPokemonDataFromTypeChain(
-  //       data[i].replace(/-/g, " ").split(" ")[0]
-  //     );
-  //     let finalDataTypes = Object.assign(data1, {
-  //       species: data2,
-  //     });
-  //     pokemonArrayTypes.push(finalDataTypes);
-  //   }
-  //   setPokemon(pokemonArrayTypes);
-  // };
-
+  
   const getPokemonDataFromType = async (pokeName) => {
     let { data } = await axios.get(
       `https://pokeapi.co/api/v2/pokemon/${pokeName}/`
     );
     return data;
-  };
-
-  const getPokemonDataFromTypeChain = async (pokeName) => {
-    if (pokeName === "ho") return (pokeName = "ho-ho");
-    if (pokeName === "mr") return (pokeName = "mr-mime");
-    if (pokeName === "mime") return (pokeName = "mime-jr");
-    if (pokeName === "nidoran") return (pokeName = "nidoran-f");
-    const {
-      data: { evolution_chain },
-    } = await axios.get(
-      `https://pokeapi.co/api/v2/pokemon-species/${pokeName}/`
-    );
-    let infoEvos = await getEvolutions(evolution_chain.url);
-
-    return infoEvos;
   };
 
   

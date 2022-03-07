@@ -11,9 +11,7 @@ import {
   ModalBody,
   Text,
   Link,
-  LinkOverlay,
   Center,
-  Flex,
   Box,
 } from "@chakra-ui/react";
 import {
