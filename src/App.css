@@ -1,0 +1,10 @@
+.right-side-bar:nth-of-type(2n) {
+    background: #f8f7f7;
+    border-radius: 5px;
+
+  }
+
+  .right-side-bar-dark:nth-of-type(2n) {
+    background: #242b37;
+    border-radius: 5px;
+  }
